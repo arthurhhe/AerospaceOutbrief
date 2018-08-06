@@ -41,13 +41,57 @@ html, body{
 	top:100%;
 	background: linear-gradient(90deg, rgba(0,0,0,0) 50vh, black 85vh);
 }
-#bio {
+#biotitle {
 	position:absolute;
 	top:5%;
 	left:55%;
 	color:white;
 	font-size: 64pt;
 	font-weight: bold;
+}
+.bio {
+	position:absolute;
+	top: calc(5% + 64pt + 20px);
+	left: 55%;
+	color:white;
+	font-size: 2.2vh;
+}
+#b1 {}
+#b2 {}
+#b3 {
+	padding-left: 32px;
+}
+#b4 {
+	padding-left: 32px;
+}
+#b5 {
+	padding-left: 32px;
+}
+#b6 {}
+#b7 {
+	padding-left: 32px;
+}
+#b8 {
+	padding-left: 32px;
+}
+#b9 {}
+#b10 {
+	padding-left: 32px;
+}
+#b11 {
+	padding-left: 32px;
+}
+#b12 {
+	padding-left: 32px;
+}
+#b13 {
+	padding-left: 32px;
+}
+#b14 {
+	padding-left: 32px;
+}
+#b15 {
+	padding-left: 32px;
 }
 button#scroll{
 	z-index:1;
