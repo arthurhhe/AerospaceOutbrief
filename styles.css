@@ -29,6 +29,32 @@ html, body{
 	font-size: 8vh;
 	line-height: 8vh;
 }
+#contentsbackground {
+	background-image: url("smoke-texture.jpg");
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+#contents {
+	position: absolute;
+	top:100%;
+	background-color: rgba(0,0,0,.75);
+}
+#contentstitle{
+	color:white;
+	font-size: 64pt;
+	text-align: left;
+	margin-left:80px;
+	margin-top:80px;
+	width:auto;
+}
+#contentsdiagram {
+	width: 100%;
+	height: calc(100% - 80px - 64pt);
+	top: calc(80px + 64pt);
+	position:absolute;
+}
 #face {
 	background-image: url("face-mirror.jpg");
 	height: 100%;
@@ -39,7 +65,7 @@ html, body{
 }
 #biogradient {
 	position:absolute;
-	top:100%;
+	top:200%;
 	background: linear-gradient(90deg, rgba(0,0,0,0) 50vh, black 85vh);
 }
 #biotitle {
@@ -58,6 +84,9 @@ html, body{
 	font-size: 2.2vh;
 }
 #b1 {}
+#va {
+	height:2.2vh;
+}
 #b2 {}
 #b3 {
 	padding-left: 32px;
@@ -133,12 +162,12 @@ button#scroll:focus {outline:0;}
 }
 #aeropedia {}
 #aeropediatitle {
-	top: 200%;
+	top: 300%;
 }
 .aeropediaembed {
 	position: absolute;
 	left: 2%;
-	top: 205%;
+	top: 305%;
 	height: 90%;
 	width: 96%;
 	border:none;
@@ -147,13 +176,13 @@ button#scroll:focus {outline:0;}
 	background-color:rgb(64, 130, 237);
 }
 #wpstitle {
-	top: 300%;
+	top: 400%;
 	color:white;
 }
 .wpsembed {
 	position: absolute;
 	left: 2%;
-	top: 305%;
+	top: 405%;
 	height: 90%;
 	width: 96%;
 	border:none;
@@ -162,6 +191,37 @@ button#scroll:focus {outline:0;}
 	background: linear-gradient(180deg, rgb(64, 130, 237), white);
 }
 #whatididtitle {
-	top: 402%;
+	top: 502%;
 	color:white;
+}
+#thanks {
+	background: linear-gradient(0deg, rgba(255,255,0,.4), white);
+	color: rgb(64, 130, 237);
+}
+#thankstitle {
+	font-size: 10vh;
+	top:620%;
+}
+#thanks ul {
+	text-align: center;
+	font-size: 2.5vh;
+	columns: 2;
+	list-style-type: none;
+	position:absolute;
+	width: 60%;
+	left: 20%;
+	padding: 0;
+	line-height: 3;
+}
+#questions {
+	background-image: url("starbackground.jpg");
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	color: white;
+}
+#questionstitle {
+	font-size: 14vh;
+	top:740%;
 }
