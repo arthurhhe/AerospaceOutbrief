@@ -9,6 +9,12 @@
 </head>
 <body>
 	<button id="scroll">&nbsp;&#129179;&nbsp;</button>
+	<button class="menubutton" id="biobutton">Bio</button>
+	<button class="menubutton" id="aerobutton">Aeropedia</button>
+	<button class="menubutton" id="wpsbutton">WPS User Guide</button>
+	<button class="menubutton" id="hackathonbutton">Hackathon</button>
+	<button class="menubutton" id="feedbackbutton">Feedback</button>
+	<button class="menubutton" id="conclusionbutton">Conclusion</button>
 	<div class="fullpage" id="banner">
 		<div class="title" id="maintitle">Summer Intern Outbrief<div style="font-size:4vh">Arthur He<br/>Knowledge Applications Department<br/>17 August 2018</div></div>
 	</div>
@@ -47,20 +53,135 @@
 			<p id="b15">&#9702;&nbsp;&nbsp;&nbsp;&nbsp;Hiking &#128694;</p>
 		</div>
 	</div>
-	<div class="fullpage" id="aeropedia">
-		<div class="title" id="aeropediatitle"><i>AERO</i>pedia</div>
-		<iframe class="aeropediaembed"src="https://aeropedia-qa.aero.org/"></iframe>
+	<div class="fullpage" id="oldaeropedia">
+		<div class="title" id="oldaeropediatitle">Old Aeropedia</div>
+		<img id="oldaeroscreenshot" src="oldaeropedia.png"/>
 	</div>
-	<div class="fullpage" id="wps">
-		<div class="title" id="wpstitle">WPS User Guide</div>
-		<iframe class="wpsembed" src="https://pages.aero.org/wpsguide/"></iframe>
+	<div class="fullpage" id="processbackground"></div>
+	<div class="fullpage" id="process">
+		<div class="title" id="processtitle">Process</div>
+		<div id="processtext">
+			<p>Version Upgrade:</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#9702;&nbsp;&nbsp;&nbsp;&nbsp;Ran test plan</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#9702;&nbsp;&nbsp;&nbsp;&nbsp;Downloaded latest MediaWiki version</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#9702;&nbsp;&nbsp;&nbsp;&nbsp;Moved files onto QA server</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#9702;&nbsp;&nbsp;&nbsp;&nbsp;Transfered images and other directories</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#9702;&nbsp;&nbsp;&nbsp;&nbsp;Updated extensions</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#9702;&nbsp;&nbsp;&nbsp;&nbsp;Changed upload permissions</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#9702;&nbsp;&nbsp;&nbsp;&nbsp;Ran test plan</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#9702;&nbsp;&nbsp;&nbsp;&nbsp;Documented everything</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#9702;&nbsp;&nbsp;&nbsp;&nbsp;Repeated on production server</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#9702;&nbsp;&nbsp;&nbsp;&nbsp;Ran test plan</p>
+			<p>User Interface:</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#9702;&nbsp;&nbsp;&nbsp;&nbsp;Used HTML, CSS, JS, and PHP to redesign</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#9702;&nbsp;&nbsp;&nbsp;&nbsp;Several rounds of revision</p>
+			<p>Aeropedia Content:</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#9702;&nbsp;&nbsp;&nbsp;&nbsp;Maintenance reports addressed</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#9702;&nbsp;&nbsp;&nbsp;&nbsp;Tools and laboratories list updated</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#9702;&nbsp;&nbsp;&nbsp;&nbsp;Help pages either newly created or improved</p>
+		</div>
+		<div id="processimg">
+			<img id="putty" src="putty.png"/>
+			<img id="winscp" src="winscp.png"/>
+		</div>
 	</div>
-	<div class="fullpage" id="whatidid">
-		<div class="title" id="whatididtitle">What I Did<br/><br/><br/><br/><br/><br/><br/><br/><br/>over 2000 edits on aeropedia!!</div>
+	<div class="fullpage" id="accimp">
+		<div class="title" id="acctitle">Accomplishments</div>
+		<div class="title" id="imptitle">Impact</div>
+		<div id="acctext">
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&#9702;&nbsp;&nbsp;&nbsp;&nbsp;Created brand new, responsive UI (default skin, front page, and main page)</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&#9702;&nbsp;&nbsp;&nbsp;&nbsp;Mediawiki version upgraded from 1.19 to 1.26.4</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&#9702;&nbsp;&nbsp;&nbsp;&nbsp;Outdated information/functionalities either updated or removed</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&#9702;&nbsp;&nbsp;&nbsp;&nbsp;New content/extensions added</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&#9702;&nbsp;&nbsp;&nbsp;&nbsp;Maintenance reports addressed</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&#9702;&nbsp;&nbsp;&nbsp;&nbsp;Administration document updated</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&#9702;&nbsp;&nbsp;&nbsp;&nbsp;Over 2000 edits!</p>
+		</div>
+		<div id="imptext">
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&#9702;&nbsp;&nbsp;&nbsp;&nbsp;Improved aesthetics and usability</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&#9702;&nbsp;&nbsp;&nbsp;&nbsp;Navigation is more intuitive and convenient</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&#9702;&nbsp;&nbsp;&nbsp;&nbsp;Able to support newer MediaWiki features</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&#9702;&nbsp;&nbsp;&nbsp;&nbsp;Easier to find relevant information</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&#9702;&nbsp;&nbsp;&nbsp;&nbsp;Helps future administrators with future updates</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&#9702;&nbsp;&nbsp;&nbsp;&nbsp;General refresh promotes usage of site</p>
+		</div>
+	</div>
+	<div class="fullpage" id="newaeropedia">
+		<div class="title" id="newaeropediatitle">New <i>AERO</i>pedia</div>
+		<iframe class="siteembed" id="newaeropediaembed"src="https://aeropedia-qa.aero.org/"></iframe>
+	</div>
+	<div class="fullpage" id="futurework">
+		<div class="title" id="futureworktitle">Future Work</div>
+		<div class="bubble" id="usage"><br/><br/>Push corporate usage<br/>for large scope<br/>documentation</div>
+		<div class="bubble" id="addcontent"><br/><br/>Integrate annual<br/>report and<br/>crosslink information</div>
+		<div class="bubble" id="upgrade"><br/><br/>Upgrade to<br/>MediaWiki 1.31<br/>after PHP upgrade</div>
+		<div class="bubble" id="textapp"><br/><br/>Improve text<br/>appearance (line<br/>spacing) for skin</div>
+	</div>
+	<div class="fullpage" id="oldwps">
+		<div class="title" id="oldwpstitle">Old WPS User Guide</div>
+		<iframe class="siteembed" id="oldwpsembed" src="https://pages.aero.org/wps/"></iframe>
+	</div>
+	<div class="fullpage" id="newtheme">
+		<div class="title" id="newthemetitle">New Theme</div>
+		<iframe class="siteembed" id="newthemeembed" src="https://pages.aero.org/newtheme/"></iframe>
+	</div>
+	<div class="fullpage" id="status">
+		<div class="title" id="statustitle">WPS User Guide Status</div>
+		<div id="accs">
+			Accomplishments
+			<p>&#9702;&nbsp;&nbsp;&nbsp;&nbsp;Menu is complete and all pages<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;contain content</p>
+			<p>&#9702;&nbsp;&nbsp;&nbsp;&nbsp;Information is more comprehensive,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;up-to-date, and relevant</p>
+		</div>
+		<div id="imps">
+			Impact
+			<p>&#9702;&nbsp;&nbsp;&nbsp;&nbsp;Will likely be used much more<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;than the old guide</p>
+			<p>&#9702;&nbsp;&nbsp;&nbsp;&nbsp;Addresses new theme topics as well as<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Aerospace practices</p>
+			<p>&#9702;&nbsp;&nbsp;&nbsp;&nbsp;Links visitors to current support<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;resources</p>
+		</div>
+		<div id="fw">
+			Future Work
+			<p>&#9702;&nbsp;&nbsp;&nbsp;&nbsp;Online form for new site creation</p>
+			<p>&#9702;&nbsp;&nbsp;&nbsp;&nbsp;Contact email (wps-support@aero.org)</p>
+			<p>&#9702;&nbsp;&nbsp;&nbsp;&nbsp;Tutorial videos for a more visual guide</p>
+			<p>&#9702;&nbsp;&nbsp;&nbsp;&nbsp;ServiceNow ticket support</p>
+			<p>&#9702;&nbsp;&nbsp;&nbsp;&nbsp;Thorough review of content</p>
+			<p>&#9702;&nbsp;&nbsp;&nbsp;&nbsp;Redirect main menu pages that have<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a submenu to first submenu item</p>
+			<p>&#9702;&nbsp;&nbsp;&nbsp;&nbsp;Visual revisions to new theme</p>
+			<p>&#9702;&nbsp;&nbsp;&nbsp;&nbsp;Fix video embed feature</p>
+			<p>&#9702;&nbsp;&nbsp;&nbsp;&nbsp;Replacement of old site and public release</p>
+		</div>
+	</div>
+	<div class="fullpage" id="newwpsbackground"></div>
+	<div class="fullpage" id="newwps">
+		<div class="title" id="newwpstitle">New WPS User Guide</div>
+		<iframe class="siteembed" id="newwpsembed" src="https://pages.aero.org/wpsguide/"></iframe>
+	</div>
+	<div class="fullpage" id="hackathon">
+		<div class="title" id="hackathontitle">Hackathon - Inside Aerospace Concept</div>
+		<iframe class="siteembed" id="hackathonembed" src="https://arthurhhe.github.io/zxc123jfz89734usdaqwf/index.html"></iframe>
+	</div>
+	<div class="fullpage" id="feedback">
+		<div class="title" id="feedbacktitle">Internship Program Feedback</div>
+		<div id="feedbacktext">
+			<p><b>What I Enjoyed:</b></p>
+			<p>&#9702;&nbsp;&nbsp;&nbsp;&nbsp;Work!!</p>
+			<p>&#9702;&nbsp;&nbsp;&nbsp;&nbsp;Professional development and networking opportunities</p>
+			<p>&#9702;&nbsp;&nbsp;&nbsp;&nbsp;The people!!</p>
+			<p>&#9702;&nbsp;&nbsp;&nbsp;&nbsp;TEC Talks, Donut Dialogues, intern outreach events</p>
+			<p>&#9702;&nbsp;&nbsp;&nbsp;&nbsp;LA and surrounding area</p>
+			<p><b>Areas for Improvement:</b></p>
+			<p>&#9702;&nbsp;&nbsp;&nbsp;&nbsp;Housing assistance</p>
+			<p>&#9702;&nbsp;&nbsp;&nbsp;&nbsp;Often slowed down because of<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;requests/meetings/permissions (intern status)</p>
+			<p>&#9702;&nbsp;&nbsp;&nbsp;&nbsp;Greater ping pong capability</p>
+		</div>
+		<div id="feedbackimg">
+			<img id="games" src="aerogames.jpg"/>
+			<img id="hack" src="hackathon.jpg"/>
+		</div>
 	</div>
 	<div class="fullpage" id="thanks">
-		<div class="title" id="thankstitle">Thank you!<br/>
-			<ul>
+		<div class="title" id="thankstitle">Thank you<br/>
+			<ul id="names">
 				<li>JC Kern</li>
 				<li>Peter Goeppinger</li>
 				<li>David Vivanco</li>

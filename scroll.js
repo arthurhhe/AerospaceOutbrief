@@ -12,6 +12,58 @@ scrollbutton.onclick = function () {
 	var nextsection = (windowheight * nextrelativesection) + 1;
 	scrollToPosition(document.documentElement, nextsection, 800);   
 }
+
+//Scroll Menu
+var bio = document.getElementById('biobutton');
+var aero = document.getElementById('aerobutton');
+var wps = document.getElementById('wpsbutton');
+var hack = document.getElementById('hackathonbutton');
+var feed = document.getElementById('feedbackbutton');
+var conc = document.getElementById('conclusionbutton');
+bio.onclick = function () {
+	var windowheight = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+	scrollToPosition(document.documentElement, 2 * windowheight, 800);   
+}
+aero.onclick = function () {
+	var windowheight = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+	scrollToPosition(document.documentElement, 3 * windowheight, 800);   
+}
+wps.onclick = function () {
+	var windowheight = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+	scrollToPosition(document.documentElement, 8 * windowheight, 800);   
+}
+hack.onclick = function () {
+	var windowheight = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+	scrollToPosition(document.documentElement, 12 * windowheight, 800);   
+}
+feed.onclick = function () {
+	var windowheight = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+	scrollToPosition(document.documentElement, 13 * windowheight, 800);   
+}
+conc.onclick = function () {
+	var windowheight = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+	scrollToPosition(document.documentElement, 14 * windowheight, 800);   
+}
+//Scroll Menu appears after first page
+window.addEventListener("scroll", menuAppear);
+function menuAppear() {
+	if (document.documentElement.scrollTop > document.documentElement.clientHeight) {
+		fadeIn(bio);
+		fadeIn(aero);
+		fadeIn(wps);
+		fadeIn(hack);
+		fadeIn(feed);
+		fadeIn(conc);
+	}
+	else {
+		fadeOut(bio);
+		fadeOut(aero);
+		fadeOut(wps);
+		fadeOut(hack);
+		fadeOut(feed);
+		fadeOut(conc);
+	}
+}
 //Scroll Animation Function
 function scrollToPosition(element, to, duration) {
 	var start = element.scrollTop,
@@ -81,7 +133,20 @@ var b12 = document.getElementById("b12");
 var b13 = document.getElementById("b13");
 var b14 = document.getElementById("b14");
 var b15 = document.getElementById("b15");
+var acctext = document.getElementById("acctext");
+var imptext = document.getElementById("imptext");
+var usage = document.getElementById("usage");
+var addcontent = document.getElementById("addcontent");
+var upgrade = document.getElementById("upgrade");
+var textapp = document.getElementById("textapp");
+var accs = document.getElementById("accs");
+var imps = document.getElementById("imps");
+var fw = document.getElementById("fw");
+var feedbacktext = document.getElementById("feedbacktext");
+var names = document.getElementById("names");
+
 window.addEventListener("scroll", fadeSlide);
+
 function fadeSlide() {
 	// Appear after scrolling past contents section
 	if (document.documentElement.scrollTop > (document.documentElement.clientHeight + (document.documentElement.clientHeight / 2.5))) {
@@ -196,6 +261,94 @@ function fadeSlide() {
 		slideRight(b15);
 		fadeOut(b15);
 	}
+	if (document.documentElement.scrollTop > ((3 * document.documentElement.clientHeight) + (document.documentElement.clientHeight / 2))) {
+		slideRight(processtext);
+		fadeIn(processtext);
+	} else {
+		slideLeft(processtext);
+		fadeOut(processtext);
+	}
+	if (document.documentElement.scrollTop > ((4 * document.documentElement.clientHeight) + (document.documentElement.clientHeight / 2))) {
+		slideRight(acctext);
+		fadeIn(acctext);
+	} else {
+		slideLeft(acctext);
+		fadeOut(acctext);
+	}
+	if (document.documentElement.scrollTop > ((4 * document.documentElement.clientHeight) + (document.documentElement.clientHeight / 1.2))) {
+		slideLeft(imptext);
+		fadeIn(imptext);
+	} else {
+		slideRight(imptext);
+		fadeOut(imptext);
+	}
+	if (document.documentElement.scrollTop > ((6 * document.documentElement.clientHeight) + (document.documentElement.clientHeight / 2.4))) {
+		slideUp(usage);
+		fadeIn(usage);
+	} else {
+		slideDown(usage);
+		fadeOut(usage);
+	}
+	if (document.documentElement.scrollTop > ((6 * document.documentElement.clientHeight) + (document.documentElement.clientHeight / 1.4))) {
+		slideUp(addcontent);
+		fadeIn(addcontent);
+	} else {
+		slideDown(addcontent);
+		fadeOut(addcontent);
+	}
+	if (document.documentElement.scrollTop > ((6 * document.documentElement.clientHeight) + (document.documentElement.clientHeight / 2.2))) {
+		slideUp(upgrade);
+		fadeIn(upgrade);
+	} else {
+		slideDown(upgrade);
+		fadeOut(upgrade);
+	}
+	if (document.documentElement.scrollTop > ((6 * document.documentElement.clientHeight) + (document.documentElement.clientHeight / 1.2))) {
+		slideUp(textapp);
+		fadeIn(textapp);
+	} else {
+		slideDown(textapp);
+		fadeOut(textapp);
+	}
+	if (document.documentElement.scrollTop > ((9 * document.documentElement.clientHeight) + (document.documentElement.clientHeight / 2))) {
+		slideRight(accs);
+		slideDown(accs);
+		fadeIn(accs);
+	} else {
+		slideLeft(accs);
+		slideUp(accs);
+		fadeOut(accs);
+	}
+	if (document.documentElement.scrollTop > ((9 * document.documentElement.clientHeight) + (document.documentElement.clientHeight / 1.2))) {
+		slideRight(imps);
+		slideUp(imps);
+		fadeIn(imps);
+	} else {
+		slideLeft(imps);
+		slideDown(imps);
+		fadeOut(imps);
+	}
+	if (document.documentElement.scrollTop > ((9 * document.documentElement.clientHeight) + (document.documentElement.clientHeight / 1.6))) {
+		slideLeft(fw);
+		fadeIn(fw);
+	} else {
+		slideRight(fw);
+		fadeOut(fw);
+	}
+	if (document.documentElement.scrollTop > ((12 * document.documentElement.clientHeight) + (document.documentElement.clientHeight / 2))) {
+		slideRight(feedbacktext);
+		fadeIn(feedbacktext);
+	} else {
+		slideLeft(feedbacktext);
+		fadeOut(feedbacktext);
+	}
+	if (document.documentElement.scrollTop > ((13 * document.documentElement.clientHeight) + (document.documentElement.clientHeight / 1.1))) {
+		slideDown(names);
+		fadeIn(names);
+	} else {
+		slideUp(names);
+		fadeOut(names);
+	}
 }
 
 function fadeIn(element) {
@@ -250,6 +403,34 @@ function slideRight(element) {
 	            clearInterval(timer);
 	        }
 	        element.style.marginLeft = pos + "px";
+	        pos += 1;
+    	}, 3);
+	}
+}
+function slideUp(element) {
+	var style = element.currentStyle || window.getComputedStyle(element);
+	var topmargin = parseInt(style.marginTop, 10);
+	if (topmargin >= 40) {
+    	var pos = 40;  // initial margin width
+    	var timer = setInterval(function () {
+	        if (pos <= 1){
+	            clearInterval(timer);
+	        }
+	        element.style.marginTop = pos + "px";
+	        pos -= 1;
+    	}, 3);
+	}
+}
+function slideDown(element) {
+	var style = element.currentStyle || window.getComputedStyle(element);
+	var topmargin = parseInt(style.marginTop, 10);
+	if (topmargin <= 1) {
+    	var pos = 1;  // initial margin width
+    	var timer = setInterval(function () {
+	        if (pos >= 40){
+	            clearInterval(timer);
+	        }
+	        element.style.marginTop = pos + "px";
 	        pos += 1;
     	}, 3);
 	}
