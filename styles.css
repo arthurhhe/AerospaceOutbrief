@@ -3,18 +3,11 @@ html, body{
 	height: 100%;
 	margin:0;
 	padding: 0;
-	font-family: 'Antic', sans-serif;
+	font-family: 'Antic', 'Arial Narrow', sans-serif;
 }
 .fullpage {
 	height: 100%;
 	width: 100%;
-}
-#banner {
-	background-image: url("Aerospace_Desktop_4.jpg");
-	background-attachment: fixed;
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: 100% 100%;
 }
 .title {
 	position: absolute;
@@ -23,11 +16,113 @@ html, body{
 	font-weight: bold;
 	font-size:4vh;
 }
+.siteembed {
+	position: absolute;
+	left: 2%;
+	height: 90%;
+	width: 96%;
+	border:none;
+}
+button#scroll{
+	z-index:1;
+	position: fixed;
+	left: 50%;
+	bottom: 2%;
+	padding:0px;
+	border-width: 0px;
+	text-align:center;
+	background-color:transparent;
+	border-radius: 100%;
+	font-size: 3vh;
+	margin-left:-1vh;
+	color:rgb(64, 130, 237);
+	text-align:center;
+	text-decoration:none;
+	line-height: 3.5vh;
+	transition: color .4s ease-in-out, background-color .4s ease-in-out;
+	animation: bounce 4s infinite;
+	font-family: 'Antic';
+}
+button#scroll:hover {
+	color:white;
+	background-color: rgb(64, 130, 237);
+	text-decoration:none;
+	cursor:pointer;
+}
+button#scroll:focus {outline:0;}
+@keyframes bounce {
+	0%, 10%, 25%, 40%, 50%, 100% {
+		transform: translateY(0);
+	}
+	20% {
+		transform: translateY(-30px);
+	}
+	30% {
+		transform: translateY(-15px);
+	}
+}
+button.menubutton {
+	z-index: 1;
+	position: fixed;
+	color: gray;
+	background-color:transparent;
+	padding: 0;
+	border-width: 0;
+	margin: 2px;
+	font-size: 10pt;
+	text-decoration: none;
+	opacity: 0;
+	font-family: 'Antic';
+	right:0;
+}
+button.menubutton:hover {
+	color: white;
+	text-decoration: none;
+	cursor: pointer;
+}
+#biobutton {}
+#aerobutton {
+	top: 10pt;
+}
+#wpsbutton {
+	top: 20pt;
+}
+#hackathonbutton {
+	top: 30pt;
+}
+#feedbackbutton {
+	top: 40pt;
+}
+#conclusionbutton {
+	top: 50pt;
+}
+#banner {
+	background-image: url("Aerospace_Desktop_4.jpg");
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
 #maintitle {
 	top:32vh;
-	color: white;
 	font-size: 8vh;
 	line-height: 8vh;
+	background: linear-gradient(150deg, #FFFFFF 30%, rgb(0,78,149) 45%, rgb(0,78,149) 55%, #FFFFFF 70%);
+	background: -webkit-linear-gradient(150deg, #FFFFFF 30%, #fdfd96 45%, #fdfd96 55%, #FFFFFF 70%);
+	background-size: 300% 100%;
+	background-repeat: no-repeat;
+	background-position: 100% 0;
+	text-fill-color: rgba(0,0,0,0.0);
+	-webkit-text-fill-color: rgba(0,0,0,0.0 );
+	background-clip: text;
+	-webkit-background-clip: text;
+	animation: shimmer 7s linear 0s infinite normal;
+	-webkit-animation: shimmer 7s linear 0s infinite normal;
+}
+@keyframes shimmer {
+	0% { background-position-x: 100%; }
+	15% { background-position-x: 0; }
+	100% { background-position-x: 0; }
 }
 #contentsbackground {
 	background-image: url("smoke-texture.jpg");
@@ -68,6 +163,13 @@ html, body{
 	top:200%;
 	background: linear-gradient(90deg, rgba(0,0,0,0) 50vh, black 85vh);
 }
+.bio {
+	position:absolute;
+	top: calc(5% + 64pt + 20px);
+	left: 55%;
+	color:white;
+	font-size: 2.2vh;
+}
 #biotitle {
 	position:absolute;
 	top:5%;
@@ -75,13 +177,6 @@ html, body{
 	color:white;
 	font-size: 64pt;
 	font-weight: bold;
-}
-.bio {
-	position:absolute;
-	top: calc(5% + 64pt + 20px);
-	left: 55%;
-	color:white;
-	font-size: 2.2vh;
 }
 #b1 {}
 #va {
@@ -123,76 +218,309 @@ html, body{
 #b15 {
 	padding-left: 32px;
 }
-button#scroll{
-	z-index:1;
-	position: fixed;
-	left: 50%;
-	bottom: 2%;
-	padding:0px;
-	border-width: 0px;
-	text-align:center;
-	background-color:white;
-	border-radius: 100%;
-	font-size: 3vh;
-	margin-left:-1vh;
-	color:rgb(64, 130, 237);
-	text-align:center;
-	text-decoration:none;
-	line-height: 3.5vh;
-	transition: color .4s ease-in-out, background-color .4s ease-in-out;
-	animation: bounce 4s infinite;
+#oldaeropedia {
+	background-image: url("starbackground.gif");
+	background-attachment: fixed;
 }
-button#scroll:hover {
+#oldaeropediatitle {
 	color:white;
-	background-color: rgb(64, 130, 237);
-	text-decoration:none;
-	cursor:pointer;
+	top: 303%;
 }
-button#scroll:focus {outline:0;}
-@keyframes bounce {
-	0%, 10%, 25%, 40%, 50%, 100% {
-		transform: translateY(0);
-	}
-	20% {
-		transform: translateY(-30px);
-	}
-	30% {
-		transform: translateY(-15px);
-	}
+#oldaeroscreenshot {
+	width: 90vw;
+	height: 80vh;
+	margin-left: 5vw;
+	margin-top: 10vh;
 }
-#aeropedia {}
-#aeropediatitle {
-	top: 300%;
+#processbackground {
+	background-image: url("process.jpg");
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
 }
-.aeropediaembed {
+#process {
 	position: absolute;
-	left: 2%;
-	top: 305%;
-	height: 90%;
-	width: 96%;
-	border:none;
-}
-#wps {
-	background-color:rgb(64, 130, 237);
-}
-#wpstitle {
 	top: 400%;
-	color:white;
+	background-color: rgba(0,0,0,.75);
 }
-.wpsembed {
+#processtitle {
+	color:white;
+	font-size: 6vh;
+	margin-top: 3vh;
+}
+#processtext {
+	margin-top: 13.3vh;
+	float:left;
+	height: 83vh;
+	width: 47%;
+	margin-left:3%;
+	background-color: rgb(240, 240, 240, .1);
+	overflow: auto;
+	color: white;
+	font-size: 3vh;
+	line-height: 1.3vh;
+	opacity: 0;
+}
+#processtext p {
+	margin-left: 2vh;
+}
+#processimg {
+	height: 100%;
+	width: 50%;
+	float: right;
+	text-align: center;
+}
+#putty {
+	height: 35%;
+	max-width: 100%;
+	margin-top: 13.3vh;
+}
+#winscp {
+	height: 45%;
+	max-width: 100%;
+	margin-top: 3%;
+}
+#accimp {
+	background: linear-gradient(-45deg, #013A6B 50%, #004E95 50%);
+}
+#acctitle{
+	color: white;
+	top: 506%;
+	text-align: left;
+	padding-left: 5vw;
+	font-size: 8vh;
+	width:auto;
+}
+#imptitle{
+	width: auto;
+	color: white;
+	top: 546%;
+	padding-left:56vw;
+	font-size: 8vh;
+}
+#acctext {
+	margin-top: 15vh;
+	float: left;
+	margin-left: 5vw;
+	overflow: auto;
+	color: white;
+	font-size: 3vh;
+	line-height: 3vh;
+	opacity: 0;
+}
+#imptext {
 	position: absolute;
-	left: 2%;
-	top: 405%;
-	height: 90%;
-	width: 96%;
-	border:none;
+	width: auto;
+	color: white;
+	top: 556%;
+	padding-left: 56vw;
+	font-size: 3vh;
+	line-height: 3vh;
+	opacity: 0;
 }
-#whatidid {
-	background: linear-gradient(180deg, rgb(64, 130, 237), white);
+#newaeropedia {}
+#newaeropediatitle {
+	top: 602%;
 }
-#whatididtitle {
-	top: 502%;
+#newaeropediaembed {
+	top: 608%;
+}
+#futurework {
+	background-color: #CBFFEC;
+}
+#futureworktitle {
+	color: #004E95;
+	top: 705%;
+	font-size: 6vh;
+}
+.bubble {
+	width:25vw;
+	height:25vh;
+	box-shadow: 0px 15px 50px 0px #004E95;
+	background: radial-gradient(rgb(0,78,149), rgba(0,78,149, .6));
+	color: #CBFFEC;
+	font-size: 3vh;
+	text-align: center;
+	position: absolute;
+	overflow: hidden;
+	opacity: 0;
+}
+#usage {
+	top: 715%;
+	left: 10vw;
+}
+#addcontent {
+	top: 755%;
+	left: 20vw;
+}
+#upgrade {
+	top: 725%;
+	left: 50vw;
+}
+#textapp {
+	top: 765%;
+	left: 60vw;
+}
+#oldwps {
+	background-image: url("Aerospace_Desktop_1.jpg");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+#oldwpstitle {
+	color: white;
+	top: 802%;
+}
+#oldwpsembed {
+	top: 808%;
+}
+#newtheme {
+	background-image: url("bluestars.png");
+	background-position: center;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+#newthemetitle {
 	color:white;
+	top: 902%;
+}
+#newthemeembed {
+	top: 908%;
+}
+#status {
+	background: #FFDF9E;
+	overflow: hidden;
+}
+#statustitle {
+	color: #004E95;
+	top: 1005%;
+	font-size: 6vh;
+}
+#accs {
+	position:absolute;
+	top: 1018%;
+	left: 15%;
+	width: 13vw;
+	height: 18vh;
+	background-color: rgba(255,179,71,.9);
+	overflow: visible;
+	font-size: 3vw;
+	color: #004E95;
+	padding:1vh 1vw;
+	opacity: 0;
+}
+#accs p {
+	padding-left: 3vw;
+	margin-top: 1vh;
+	font-size: 1.5vw;
+	white-space: nowrap;
+}
+#imps {
+	position:absolute;
+	top: 1055%;
+	left: 18%;
+	width: 13vw;
+	height: 18vh;
+	background-color: rgba(255,179,71,.9);
+	overflow: visible;
+	font-size: 3vw;
+	color: #004E95;
+	padding:1vh 1vw;
+	opacity: 0;
+}
+#imps p {
+	padding-left: 3vw;
+	margin-top: 1vh;
+	font-size: 1.5vw;
+	white-space: nowrap;
+}
+#fw {
+	position:absolute;
+	top: 1022%;
+	left: 52%;
+	width: 17vw;
+	height: 41vh;
+	background-color: rgba(255,179,71,.9);
+	overflow: visible;
+	font-size: 3vw;
+	color: #004E95;
+	padding:1vh 1vw;
+	opacity: 0;
+}
+#fw p {
+	padding-left: 3vw;
+	margin-top: 1vh;
+	font-size: 1.5vw;
+	white-space: nowrap;
+}
+#newwpsbackground {
+	background-image: url("bluestars.gif");
+	background-attachment: fixed;
+	background-repeat: repeat-x;
+	background-size: auto 120%;
+}
+#newwps {
+	position: absolute;
+	top:1100%;
+	background-color: rgba(0,0,0,.75);
+}
+#newwpstitle {
+	top: 2vh;
+	color:white;
+}
+#newwpsembed {
+	top: 8%;
+}
+#hackathon {
+	background-image: url("starrybackground.png");
+}
+#hackathontitle {
+	top: 1202%;
+	color:white;
+}
+#hackathonembed {
+	top: 1208%;
+}
+#feedback {
+	background: linear-gradient(180deg, rgb(64, 130, 237) 55%, white);
+}
+#feedbacktitle {
+	top: 1305%;
+	color:white;
+	font-size: 6vh;
+}
+#feedbacktext {
+	margin-top: 13.3vh;
+	float:left;
+	height: 83vh;
+	width: 47%;
+	margin-left:3%;
+	overflow: auto;
+	color: white;
+	font-size: 3vh;
+	line-height: 3vh;
+	opacity: 0;
+}
+#feedbacktext p {
+	margin-left: 2vh;
+}
+#feedbackimg {
+	height: 100%;
+	width: 50%;
+	float: right;
+	text-align: center;
+}
+#games {
+	margin-top: 14vh;
+	height: 40vh;
+	max-width: 100%;
+}
+#hack {
+	margin-top: 3vh;
+	height: 40vh;
+	max-width: 100%;
 }
 #thanks {
 	background: linear-gradient(0deg, rgba(255,255,0,.4), white);
@@ -200,7 +528,7 @@ button#scroll:focus {outline:0;}
 }
 #thankstitle {
 	font-size: 10vh;
-	top:620%;
+	top:1420%;
 }
 #thanks ul {
 	text-align: center;
@@ -212,6 +540,10 @@ button#scroll:focus {outline:0;}
 	left: 20%;
 	padding: 0;
 	line-height: 3;
+	margin: 0;
+}
+#names {
+	opacity: 0;
 }
 #questions {
 	background-image: url("starbackground.jpg");
@@ -223,5 +555,16 @@ button#scroll:focus {outline:0;}
 }
 #questionstitle {
 	font-size: 14vh;
-	top:740%;
+	top:1540%;
+	background: linear-gradient(150deg, #FFFFFF 30%, rgb(110,21,122) 45%, rgb(110,21,122) 55%, #FFFFFF 70%);
+	background: -webkit-linear-gradient(150deg, #FFFFFF 30%, rgb(110,21,122) 45%, rgb(110,21,122) 55%, #FFFFFF 70%);
+	background-size: 300% 100%;
+	background-repeat: no-repeat;
+	background-position: 100% 0;
+	text-fill-color: rgba(0,0,0,0.0);
+	-webkit-text-fill-color: rgba(0,0,0,0.0 );
+	background-clip: text;
+	-webkit-background-clip: text;
+	animation: shimmer 7s linear 0s infinite normal;
+	-webkit-animation: shimmer 7s linear 0s infinite normal;
 }
