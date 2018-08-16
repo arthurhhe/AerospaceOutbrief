@@ -22,23 +22,23 @@ var feed = document.getElementById('feedbackbutton');
 var conc = document.getElementById('conclusionbutton');
 bio.onclick = function () {
 	var windowheight = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
-	scrollToPosition(document.documentElement, 2 * windowheight, 800);   
+	scrollToPosition(document.documentElement, 2 * windowheight, 800);
 }
 aero.onclick = function () {
 	var windowheight = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
-	scrollToPosition(document.documentElement, 3 * windowheight, 800);   
+	scrollToPosition(document.documentElement, 3 * windowheight, 800);
 }
 wps.onclick = function () {
 	var windowheight = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
-	scrollToPosition(document.documentElement, 8 * windowheight, 800);   
+	scrollToPosition(document.documentElement, 8 * windowheight, 800);
 }
 hack.onclick = function () {
 	var windowheight = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
-	scrollToPosition(document.documentElement, 12 * windowheight, 800);   
+	scrollToPosition(document.documentElement, 12 * windowheight, 800);
 }
 feed.onclick = function () {
 	var windowheight = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
-	scrollToPosition(document.documentElement, 13 * windowheight, 800);   
+	scrollToPosition(document.documentElement, 13 * windowheight, 800);
 }
 conc.onclick = function () {
 	var windowheight = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
@@ -62,6 +62,36 @@ function menuAppear() {
 		fadeOut(hack);
 		fadeOut(feed);
 		fadeOut(conc);
+	}
+	if (document.documentElement.scrollTop > (2 * document.documentElement.clientHeight) && document.documentElement.scrollTop < (3 * document.documentElement.clientHeight)) {
+		bio.style.color = "white";
+	} else {
+		bio.style.color = "";
+	}
+	if (document.documentElement.scrollTop > (3 * document.documentElement.clientHeight) && document.documentElement.scrollTop < (8 * document.documentElement.clientHeight)) {
+		aero.style.color = "white";
+	} else {
+		aero.style.color = "";
+	}
+	if (document.documentElement.scrollTop > (8 * document.documentElement.clientHeight) && document.documentElement.scrollTop < (12 * document.documentElement.clientHeight)) {
+		wps.style.color = "white";
+	} else {
+		wps.style.color = "";
+	}
+	if (document.documentElement.scrollTop > (12 * document.documentElement.clientHeight) && document.documentElement.scrollTop < (13 * document.documentElement.clientHeight)) {
+		hack.style.color = "white";
+	} else {
+		hack.style.color = "";
+	}
+	if (document.documentElement.scrollTop > (13 * document.documentElement.clientHeight) && document.documentElement.scrollTop < (14 * document.documentElement.clientHeight)) {
+		feed.style.color = "white";
+	} else {
+		feed.style.color = "";
+	}
+	if (document.documentElement.scrollTop > (14 * document.documentElement.clientHeight)) {
+		conc.style.color = "white";
+	} else {
+		conc.style.color = "";
 	}
 }
 //Scroll Animation Function
