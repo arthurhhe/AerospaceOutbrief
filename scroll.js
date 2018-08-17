@@ -169,6 +169,7 @@ var usage = document.getElementById("usage");
 var addcontent = document.getElementById("addcontent");
 var upgrade = document.getElementById("upgrade");
 var textapp = document.getElementById("textapp");
+var maintenance = document.getElementById("maintenance");
 var accs = document.getElementById("accs");
 var imps = document.getElementById("imps");
 var fw = document.getElementById("fw");
@@ -319,7 +320,7 @@ function fadeSlide() {
 		slideDown(usage);
 		fadeOut(usage);
 	}
-	if (document.documentElement.scrollTop > ((6 * document.documentElement.clientHeight) + (document.documentElement.clientHeight / 1.4))) {
+	if (document.documentElement.scrollTop > ((6 * document.documentElement.clientHeight) + (document.documentElement.clientHeight / 1.5))) {
 		slideUp(addcontent);
 		fadeIn(addcontent);
 	} else {
@@ -333,12 +334,19 @@ function fadeSlide() {
 		slideDown(upgrade);
 		fadeOut(upgrade);
 	}
-	if (document.documentElement.scrollTop > ((6 * document.documentElement.clientHeight) + (document.documentElement.clientHeight / 1.2))) {
+	if (document.documentElement.scrollTop > ((6 * document.documentElement.clientHeight) + (document.documentElement.clientHeight / 1.3))) {
 		slideUp(textapp);
 		fadeIn(textapp);
 	} else {
 		slideDown(textapp);
 		fadeOut(textapp);
+	}
+	if (document.documentElement.scrollTop > ((6 * document.documentElement.clientHeight) + (document.documentElement.clientHeight / 1.1))) {
+		slideUp(maintenance);
+		fadeIn(maintenance);
+	} else {
+		slideDown(maintenance);
+		fadeOut(maintenance);
 	}
 	if (document.documentElement.scrollTop > ((9 * document.documentElement.clientHeight) + (document.documentElement.clientHeight / 2))) {
 		slideRight(accs);

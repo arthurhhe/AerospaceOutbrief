@@ -348,19 +348,23 @@ button.menubutton:hover {
 }
 #usage {
 	top: 715%;
-	left: 10vw;
-}
-#addcontent {
-	top: 755%;
 	left: 20vw;
 }
+#addcontent {
+	top: 752%;
+	left: 5vw;
+}
 #upgrade {
-	top: 725%;
-	left: 50vw;
+	top: 722%;
+	left: 55vw;
 }
 #textapp {
-	top: 765%;
-	left: 60vw;
+	top: 762%;
+	left: 70vw;
+}
+#maintenance {
+	top: 768%;
+	left: 37vw;
 }
 #oldwps {
 	background-image: url("Aerospace_Desktop_1.jpg");
